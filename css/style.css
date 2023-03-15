@@ -56,7 +56,7 @@ body{
 }
 
 .apresentacao-conteudo{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     /* para utilizarmos o gap precisamos estar com o display flex */
@@ -64,10 +64,17 @@ body{
 }
 
 .fotopessoal{
-    width: 450px;
-    height: 550px;
+    width: 35%;
+    height: 100%;
     border-radius: 100px;
 }
+
+.fotopessoal:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+}
+
 
 .apresentacao-conteudo-titulo{
     font-size: 2.25rem;
@@ -103,7 +110,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 16px;
-    width: 280px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
     font-size: 1.5rem;
@@ -125,8 +132,33 @@ body{
     transition: 1s;
 }
 
-.fotopessoal:hover{
-    transform: scale(1.05);
-    transition: 1s;
-    cursor: pointer;
+/* responsividade */
+
+@media (max-width: 999px){
+    .fotopessoal{
+        justify-content: center;
+        width: 45%;
+        margin-bottom: 50px;
+    }
+    .cabecalho{
+        padding: 4%;
+    }
+    .cabecalho-menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao-conteudo{
+        width: auto;
+    }
 }
+
+@media (max-width: 376px){
+    .fotopessoal{
+        border-radius: 50px;
+        width: 70%;
+    }
+}
+
